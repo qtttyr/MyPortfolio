@@ -181,6 +181,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
       <head>
+        {/* Подтверждение сайта в Google Search Console. Не удалять после
+            подтверждения — Google отменит верификацию, если тег исчезнет. */}
+        <meta
+          name="google-site-verification"
+          content="gStgCMVULfih4OeZELdQrvnDmpQH9GZBTDqrUIfFzbk"
+        />
         {/* Структурированные данные: Person + WebSite + список проектов */}
         <script
           type="application/ld+json"

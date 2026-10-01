@@ -47,6 +47,18 @@ npm run icons    # перегенерировать PNG-иконки (192/512) �
 | `app/twitter-image.tsx` | то же для Twitter/X |
 | `public/icons/*.png` | иконки для PWA-манифеста, `npm run icons` |
 
+## Подтверждение сайта в Google Search Console
+
+В `app/layout.tsx` прописан тег:
+
+```html
+<meta name="google-site-verification" content="gStgCMVULfih4OeZELdQrvnDmpQH9GZBTDqrUIfFzbk" />
+```
+
+**Его нельзя удалять** — Google отменит подтверждение, если тег пропадёт из `<head>`
+главной страницы. Сайт статический, тег попадает в готовый HTML на этапе сборки,
+поэтому Google увидит его и без запущенного JS.
+
 ## Что уже сделано для SEO
 
 - `title` = `Miras Kustaibek | Portfolio`, `description`, `keywords`
